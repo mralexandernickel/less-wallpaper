@@ -1,0 +1,19 @@
+//
+// Wallpaper Helper...
+//
+// Makes Background Images scale over the complete
+// Container, no matter which Pixel-Dimensions it has.
+//
+// @author Alexander Nickel
+// @company labor:80
+// --------------------------------------------------
+.wallpaper(@image)
+{
+  background: url(@image) center center no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='@{image}',sizingMethod='scale');
+  -ms-filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='@{image}',sizingMethod='scale');
+}
